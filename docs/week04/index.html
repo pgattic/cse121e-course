@@ -45,7 +45,7 @@
       	But wait a minute, you think. "Don't our computers do this for us already? Can't I write sequential code like I've always done and it will still run faster if there are multiple cores on my machine?" Sorry, it doesn't work that way. Except in some very rare cases, if you want to use more than one core on your computer, you have to make it happen by changing the way you write and design your code.
 
 
-      	You may also think, "There has to be a penalty to pay, right? Nothing comes for free. It must be harder to do." You are correct. It can be much more complicated and nasty if the language you have chosen isn't designed to do concurrent programming (yes I'm looking at you C, C++, JavaScript, Clojure, and many, many others). 
+      	You may also think, "There has to be a penalty to pay, right? Nothing comes for free. It must be harder to do." You are correct. It can be much more complicated and nasty if the language you have chosen isn't designed to do concurrent programming (yes I'm looking at you C, C++, JavaScript, Python, and many, many others). 
       	</p> 
       	<p>
       		But Erlang was specifically designed for concurrent programming. Because of that, the biggest traps programmers fall into when they 
@@ -66,7 +66,7 @@
       		Erlang processes are not the same thing as an operating system process. OS processes are things like applications and 
       		<a href="https://www.webopedia.com/TERM/D/daemon.html"
           		target="_blank"
-          		rel="noreferrer">daemon's</a> running on your computer. One difference between OS processes running on your computer and an Erlang process is that 
+          		rel="noreferrer">daemons</a> running on your computer. One difference between OS processes running on your computer and an Erlang process is that 
           	Each OS process has its own chunk of memory. <a href="https://www.skcript.com/svr/concurrency-in-the-erlang-vm/"
           		target="_blank"
           		rel="noreferrer">Erlang processes</a> do not since they are small pieces of a single OS process all running at the same time.
@@ -248,7 +248,7 @@ run()-&gt;
     run().
 </code></pre></p>
 	<p>
-		You may be thinking, "But what if they don't send a process ID to respond too?" Good question. Don't put in an error handling match for that. Let them 
+		You may be thinking, "But what if they don't send a process ID to respond to?" Good question. Don't put in an error handling match for that. Let them 
 		be responsible for their own actions. &#128519; Besides, you couldn't tell them they did it wrong anyway. They will get a message that says something 
 		like this.
 	</p>
